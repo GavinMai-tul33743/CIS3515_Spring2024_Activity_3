@@ -4,8 +4,10 @@ import android.content.Context
 import android.graphics.Color
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.BaseAdapter
 import android.widget.TextView
+import kotlin.math.log
 
 class TextSizeAdapter(_context: Context, _spinner: Int, _textSizes:Array<Int>) : BaseAdapter() {
 
@@ -42,6 +44,7 @@ class TextSizeAdapter(_context: Context, _spinner: Int, _textSizes:Array<Int>) :
 
     override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup?): View {
         return super.getDropDownView(position, convertView, parent).apply {
+            println("Here")
             setBackgroundColor(Color.parseColor("Black"))
         }
 
